@@ -67,10 +67,18 @@
         <div class="message" id="surpriseMessage">🎉 Wishing you a day filled with love, joy, and cake! 🎂</div>
     </div>
 
+    <!-- Audio element for background sound -->
+    <audio id="birthdayAudio" src="bd.mp3"></audio>
+
     <script>
         document.getElementById('surpriseButton').addEventListener('click', function() {
             const message = document.getElementById('surpriseMessage');
+            const audio = document.getElementById('birthdayAudio');
+
             message.style.display = 'block';
+
+            // Play the birthday music
+            audio.play();
 
             // Create confetti
             for (let i = 0; i < 100; i++) {
